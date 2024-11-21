@@ -1,0 +1,62 @@
+* [33mb69a084[m[33m ([m[1;36mHEAD -> [m[1;32missue-3/PagosFactura[m[33m, [m[1;31morigin/qa[m[33m, [m[1;31morigin/Guillermo[m[33m, [m[1;32mqa[m[33m, [m[1;32mGuillermo[m[33m)[m útimos ajustes excel facturas
+* [33m822ab6d[m útimos ajustes excel facturas
+*   [33mba472df[m Merge branch 'Guillermo' into qa
+[32m|[m[33m\[m  
+[32m|[m * [33md0477a3[m[33m ([m[1;31morigin/issue-2/ExcelFacturas[m[33m)[m útimos ajustes excel facturas
+[32m|[m * [33mf2436f3[m avances excel facturas
+* [33m|[m [33md64daa9[m hora mala facturas
+[33m|[m[33m/[m  
+[33m|[m * [33mc7ede74[m[33m ([m[1;31morigin/issue-1/CrearModuloAsistencias[m[33m, [m[1;32missue-1/CrearModuloAsistencias[m[33m)[m avances asistencias
+[33m|[m[33m/[m  
+* [33m2ffa926[m cualquier cambio que falte
+* [33m74456c8[m reacomodando factura
+* [33m4b9e4e7[m reacomodando factura
+* [33m8be5c69[m reacomodando factura
+* [33ma9bdad2[m reacomodando factura
+* [33me99904e[m reacomodando factura
+* [33m4fa4089[m reacomodando factura
+* [33m7c6c5cd[m reacomodando factura
+* [33m44aab72[m reacomodando modulos
+* [33mec34d81[m reacomodando modulos
+* [33mea5e282[m reacomodando modulos
+* [33ma779ed7[m reacomodando modulos
+[34m|[m * [33m3063a09[m[33m ([m[1;35mrefs/stash[m[33m)[m WIP on qa: 5c7050b agregue nuevos parametros en Emplyee
+[34m|[m[34m/[m[36m|[m 
+[34m|[m * [33mdbcc7f5[m index on qa: 5c7050b agregue nuevos parametros en Emplyee
+[34m|[m[34m/[m  
+* [33m5c7050b[m agregue nuevos parametros en Emplyee
+* [33m43415e8[m agregue nuevos parametros en Emplyee
+* [33m4a5748d[m agregando cancelacion factura y agragando estatus unidad medida
+* [33m1986187[m pdfcambios
+* [33m9c60d06[m pdfcambios
+* [33mb3699ca[m agregamos modulo de empleados
+* [33ma2fe82a[m agregamos modulo de empleados
+* [33m340d515[m agregamos modulo de empleados
+* [33m9c715dd[m cree pdf factura
+* [33m4c83ab9[m cree pdf factura
+* [33m81bb9a9[m cree pdf factura
+*   [33mb93dad1[m Merge branch 'qa' of https://gitlab.com/SolucionesIntegrales/asmateback into qa
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m380bddf[m afinando
+* [1;32m|[m [33m5d3b6a5[m separcion de QA prod web api local
+[1;32m|[m[1;32m/[m  
+* [33mdcb5843[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m separcion de QA prod web api local
+* [33mbede6c1[m separcion de QA prod web api local
+* [33m18b4e0b[m cambio de idea
+* [33m125f496[m config environment
+* [33mbe5d92d[m config environment
+* [33ma3acfb8[m config environment
+* [33md3f7fb4[m config environment
+* [33m228adad[m conflictos
+* [33m0e71666[m termin[e de migrar timbrado ahora estoy probando el tipo de timbrado entre dev y prod
+* [33m078a4d6[m avances timbrado
+* [33m4e9759c[m agregue seteador de user id
+* [33mc3ce1ab[m arregle validaciones de companias y clientes
+* [33m79d6c21[m arregle validaciones de companias y clientes
+* [33mc3cc1a7[m arregle validaciones de companias y clientes
+* [33mdc8f490[m agregue el crud para factura y factura movimientos
+* [33m72878ff[m Constryendo facturacion services
+* [33m89792b3[m Agregando [Authorize] en todos los controllers
+* [33md5ec58d[m Actualizar .gitignore
+* [33mb3827cd[m Primer commit
+* [33m771a494[m[33m ([m[1;31morigin/main[m[33m)[m Initial commit

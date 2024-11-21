@@ -1,0 +1,3 @@
+Capa de infraestructura: Esta capa proporciona la implementación técnica y las herramientas necesarias para admitir la capa de dominio. 
+Incluye componentes como el acceso a bases de datos, servicios web, APIs externas, seguridad, registro, etc. 
+Esta capa encapsula los detalles técnicos y se asegura de que el núcleo de la aplicación sea independiente de la tecnología subyacente.

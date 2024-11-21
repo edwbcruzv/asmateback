@@ -1,0 +1,6274 @@
+{
+	"info": {
+		"_postman_id": "b0b8f503-bd9a-481a-9ef1-6a541c9fa5ee",
+		"name": "MateBack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14606470"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/api/v{version}/Login/auth",
+					"protocolProfileBehavior": {
+						"followRedirects": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nickNAme\":\"admin\",\r\n    \"passwordAux\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Login/auth",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Login",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administracion",
+			"item": [
+				{
+					"name": "Puesto",
+					"item": [
+						{
+							"name": "CreatePuesto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"departamentoId\": 4,\r\n  \"clave\": \"super\",\r\n  \"descripcion\": \"un super\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletePuesto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdatePuesto",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 0,\r\n  \"departamentoId\": 0,\r\n  \"clave\": \"string\",\r\n  \"descripcion\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllByDepartamentoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto/departamento/5",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto",
+										"departamento",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllByCompanyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Puesto/company/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Puesto",
+										"company",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Departamento",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Departamento/company/12",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Departamento",
+										"company",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Departamento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Departamento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Companies",
+					"item": [
+						{
+							"name": "/api/v{version}/Companies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "CIDNIA",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "CIDNIA DESCIPCION",
+											"type": "text"
+										},
+										{
+											"key": "SalaryDays",
+											"value": "30",
+											"type": "text"
+										},
+										{
+											"key": "CompanyStatus",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "CompanyProfile",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/LogoFo.png",
+											"disabled": true
+										},
+										{
+											"key": "RegistroPatronal",
+											"value": "Z3921404102",
+											"type": "text"
+										},
+										{
+											"key": "PostalCode",
+											"value": "04200",
+											"type": "text"
+										},
+										{
+											"key": "RegimenFiscalId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "RepresentanteLegal",
+											"value": "Erika Aldama",
+											"type": "text"
+										},
+										{
+											"key": "Rfc",
+											"value": "CID150911J51",
+											"type": "text"
+										},
+										{
+											"key": "RazonSocial",
+											"value": "CONSULTORIA INTEGRAL EN DESARROLLO DE NEGOCIOS E INNOVACION ACTUARIAL,S. DE R.L. DE C.V.",
+											"type": "text"
+										},
+										{
+											"key": "Certificado",
+											"value": "/",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "PrivateKeyFile",
+											"value": "/",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "PassPrivateKey",
+											"value": "Gmate.1509",
+											"type": "text"
+										},
+										{
+											"key": "FolioFactura",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Calle",
+											"value": "Cerro del Borrego",
+											"type": "text"
+										},
+										{
+											"key": "NoExt",
+											"value": "143",
+											"type": "text"
+										},
+										{
+											"key": "NoInt",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "Colonia",
+											"value": "Campestre Churubusco",
+											"type": "text"
+										},
+										{
+											"key": "Estado",
+											"value": "Ciudad de México",
+											"type": "text"
+										},
+										{
+											"key": "Pais",
+											"value": "México",
+											"type": "text"
+										},
+										{
+											"key": "File",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/aportaPDF.png"
+										},
+										{
+											"key": "FileCer",
+											"type": "file",
+											"src": "/C:/StaticFiles/Mate/CSD/MCO160912SP7/155202323247.cer"
+										},
+										{
+											"key": "FileKey",
+											"type": "file",
+											"src": "/C:/StaticFiles/Mate/CSD/MCO160912SP7/225202310403.key"
+										},
+										{
+											"key": "Municipio",
+											"value": "Coyoacan",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/v{version}/Companies/",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "MAXAL",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "En MAXAL Consultores, integramos soluciones especificas, basados en la creación de experiencias a favor de nuestros clientes, con la finalidad de alcanzar sus objetivos.",
+											"type": "text"
+										},
+										{
+											"key": "FechaCreacion",
+											"value": "31/12/2022",
+											"type": "text"
+										},
+										{
+											"key": "CreatorUser",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "SalaryDays",
+											"value": "30",
+											"type": "text"
+										},
+										{
+											"key": "CompanyStatus",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "CompanyProfile",
+											"value": "/",
+											"type": "text"
+										},
+										{
+											"key": "RegistroPatronal",
+											"value": "Z3921404102",
+											"type": "text"
+										},
+										{
+											"key": "PostalCode",
+											"value": "04200",
+											"type": "text"
+										},
+										{
+											"key": "RegimenFiscalId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "RepresentanteLegal",
+											"value": "Erika Aldama",
+											"type": "text"
+										},
+										{
+											"key": "Rfc",
+											"value": "MCO160912SP7",
+											"type": "text"
+										},
+										{
+											"key": "RazonSocial",
+											"value": "MAXAL CONSULTORES",
+											"type": "text"
+										},
+										{
+											"key": "Certificado",
+											"value": "/",
+											"type": "text"
+										},
+										{
+											"key": "PrivateKeyFile",
+											"value": "/",
+											"type": "text"
+										},
+										{
+											"key": "PassPrivateKey",
+											"value": "Gmate.1509",
+											"type": "text"
+										},
+										{
+											"key": "FolioFactura",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Calle",
+											"value": "Cerro del Borrego",
+											"type": "text"
+										},
+										{
+											"key": "NoExt",
+											"value": "143",
+											"type": "text"
+										},
+										{
+											"key": "NoInt",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "Colonia",
+											"value": "Campestre Churubusco",
+											"type": "text"
+										},
+										{
+											"key": "Estado",
+											"value": "Ciudad de México",
+											"type": "text"
+										},
+										{
+											"key": "Pais",
+											"value": "México",
+											"type": "text"
+										},
+										{
+											"key": "File",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "FileCer",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "FileKey",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "Municipio",
+											"value": "Coyoacann",
+											"type": "text"
+										},
+										{
+											"key": "Id",
+											"value": "14",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/14",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/v{{version}}/Companies",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/13",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/v{{version}}/Companies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/v{{version}}/Companies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/v{{version}}/Companies/User/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/user/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/v{version}/Companies/{companyId}/user/{userid}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/12/user/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"12",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/v{version}/Companies/{companyId}/user/{userid} Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Companies/12/user/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Companies",
+										"12",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjkwNTYyMjY1LCJleHAiOjE2OTA2NDg2NjUsImlhdCI6MTY5MDU2MjI2NSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.CfMEDofIHAZqoc-FGHM9D8uVvFW6_UHeeuvXOL2OPaI",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"companyId\": 12,\r\n  \"noEmpleado\": 12,\r\n  \"rfc\": \"\",\r\n  \"nss\": \"\",\r\n  \"nombre\": \"string\",\r\n  \"apellidoPaterno\": \"string\",\r\n  \"apellidoMaterno\": \"string\",\r\n  \"curp\": \"\",\r\n  \"estadoCivil\": 0,\r\n  \"mail\": \"string\",\r\n  \"noCuenta\": \"string\",\r\n  \"clabe\": \"string\",\r\n  \"bancoId\": null,\r\n  \"estatus\": 0,\r\n  \"userId\": null,\r\n  \"mailCorporativo\": \"string\",\r\n  \"telefonoMovil\": \"string\",\r\n  \"telefonoFijo\": \"string\",\r\n  \"codigoPostal\": \"string\",\r\n  \"calle\": \"string\",\r\n  \"noInt\": \"string\",\r\n  \"noExt\": \"string\",\r\n  \"estado\": \"string\",\r\n  \"municipio\": \"string\",\r\n  \"ingreso\": \"2023-05-30T18:31:36.518Z\",\r\n  \"fechaContrato\": \"2023-06-02T16:32:15.066Z\",\r\n  \"relojChecador\": \"string\",\r\n  \"registroPatronal\": \"string\",\r\n  \"departamentoId\": 0,\r\n  \"puestoId\": null,\r\n  \"finContrato\": \"2023-05-30T18:31:36.518Z\",\r\n  \"tipoNomina\": 0,\r\n  \"salarioMensual\": 0,\r\n  \"salarioDiario\": 0,\r\n  \"salarioDiarioIntegrado\": 0,\r\n  \"sbc\": 0,\r\n  \"porcentaje\": 0,\r\n  \"tipoContratoId\": null,\r\n  \"tipoJornadaId\": 2,\r\n  \"tipoPrevicionSocial\": 1,\r\n  \"formaPagoId\": null,\r\n  \"tipoPeriocidadPagoId\": 1,\r\n  \"tipoRegimenId\": null,\r\n  \"tipoRiesgoTrabajoId\": null,\r\n  \"tipoIncapacidadId\": null,\r\n  \"creditoFonacot\": \"string\",\r\n  \"creditoInfonavit\": \"string\",\r\n  \"descuentoCreditoHipo\": 0,\r\n  \"regimenFiscalId\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Id\": 24,\r\n  \"companyId\": 12,\r\n  \"noEmpleado\": 12,\r\n  \"rfc\": \"\",\r\n  \"nss\": \"\",\r\n  \"nombre\": \"string\",\r\n  \"apellidoPaterno\": \"string\",\r\n  \"apellidoMaterno\": \"string\",\r\n  \"curp\": \"\",\r\n  \"estadoCivil\": 0,\r\n  \"mail\": \"string\",\r\n  \"noCuenta\": \"string\",\r\n  \"clabe\": \"string\",\r\n  \"bancoId\": null,\r\n  \"estatus\": 0,\r\n  \"userId\": null,\r\n  \"mailCorporativo\": \"string\",\r\n  \"telefonoMovil\": \"string\",\r\n  \"telefonoFijo\": \"string\",\r\n  \"codigoPostal\": \"string\",\r\n  \"calle\": \"string\",\r\n  \"noInt\": \"string\",\r\n  \"noExt\": \"string\",\r\n  \"estado\": \"string\",\r\n  \"municipio\": \"string\",\r\n  \"ingreso\": \"2023-05-30T18:31:36.518Z\",\r\n  \"fechaContrato\": \"2023-06-02T16:32:15.066Z\",\r\n  \"relojChecador\": \"string\",\r\n  \"registroPatronal\": \"string\",\r\n  \"departamentoId\": 0,\r\n  \"puestoId\": null,\r\n  \"finContrato\": \"2023-05-30T18:31:36.518Z\",\r\n  \"tipoNomina\": 0,\r\n  \"salarioMensual\": 0,\r\n  \"salarioDiario\": 0,\r\n  \"salarioDiarioIntegrado\": 0,\r\n  \"sbc\": 0,\r\n  \"porcentaje\": 0,\r\n  \"tipoContratoId\": null,\r\n  \"tipoJornadaId\": 0,\r\n  \"tipoPrevicionSocial\": 1,\r\n  \"formaPagoId\": null,\r\n  \"tipoPeriocidadPagoId\": 1,\r\n  \"tipoRegimenId\": null,\r\n  \"tipoRiesgoTrabajoId\": null,\r\n  \"tipoIncapacidadId\": null,\r\n  \"creditoFonacot\": \"string\",\r\n  \"creditoInfonavit\": \"string\",\r\n  \"descuentoCreditoHipo\": 0,\r\n  \"regimenFiscalId\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/16",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										"16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByCompanyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/company/12",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										"company",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllByDepartamentoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/departamento/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										"departamento",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/16",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										"16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Employee/23",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Employee",
+										"23"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Periodo",
+					"item": [
+						{
+							"name": "GetPeriodoById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"anio\": 2023,\r\n  \"companyId\": 12,\r\n  \"tipoPeriocidadId\": 13\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/periodo/10",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"periodo",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPeriodosByCompanyIdAndTipo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/compania/2/periocidad/13",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"compania",
+										"2",
+										"periocidad",
+										"13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ExcelAsistenciasPorPeriodos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Periodo/excelAsistenciaPorPeriodo/122",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Periodo",
+										"excelAsistenciaPorPeriodo",
+										"122"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CargaExcelAsistenciasPorPeriodos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "122",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/LeezMito/Downloads/202311_Seduzac.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Periodo/cargaExcelAsistenciaPorPeriodo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Periodo",
+										"cargaExcelAsistenciaPorPeriodo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreatePeriodoCommand",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Anio",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "28",
+											"type": "text"
+										},
+										{
+											"key": "TipoPeriocidadId",
+											"value": "19",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/periodo/",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"periodo",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjkyMTEzNTczLCJleHAiOjE2OTIxOTk5NzMsImlhdCI6MTY5MjExMzU3MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.HonzFvM7RyR_8Mz85YkO2JaDV92HIwu8Ua5zGVb3VrA",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Menus",
+					"item": [
+						{
+							"name": "Crear",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"menuName\": \"string\",\r\n  \"menuSource\": \"string\",\r\n  \"menuIcon\": \"string\",\r\n  \"menuOrder\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Menus",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Menus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Menus",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Menus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Menus/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Menus",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByUserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Menus/user/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Menus",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Users/6",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Users",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Id\": 3,\r\n  \"menuName\": \"string string\",\r\n  \"menuSource\": \"string\",\r\n  \"menuIcon\": \"string\",\r\n  \"menuOrder\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Menus/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Menus",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SubMenus",
+					"item": [
+						{
+							"name": "Crear",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"subMenuName\": \"string\",\r\n  \"subMenuSource\": \"string\",\r\n  \"subMenuIcon\": \"string\",\r\n  \"subMenuOrder\": 0,\r\n  \"menuId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetByUserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus/user/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"Id\": 1,\r\n  \r\n  \"subMenuName\": \"string menu\",\r\n  \"subMenuSource\": \"string\",\r\n  \"subMenuIcon\": \"string\",\r\n  \"subMenuOrder\": 0,\r\n  \"menuId\": 1\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SubMenus/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SubMenus",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "UserName",
+									"value": "Administrador",
+									"description": "admin",
+									"type": "text"
+								},
+								{
+									"key": "NickName",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "UserPassword",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserProfile",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserEmail",
+									"value": "leezmitoo@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "UserType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "userpasswordjwt",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CompanyId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UserPasswordAux",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/C:/Users/LeezMito/Pictures/Ava.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Users",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Users",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Users/6",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Users/6",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "UserName",
+									"value": "Administrador User",
+									"description": "admin",
+									"type": "text"
+								},
+								{
+									"key": "NickName",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "UserEmail",
+									"value": "leezmitoo@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "UserType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/C:/Users/LeezMito/Pictures/Ava.png"
+								},
+								{
+									"key": "Id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Users/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Selectors",
+			"item": [
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 7,\r\n  \"menuId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Selectors/menu",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Selectors",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Selectors/menu/1/user/7",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Selectors",
+								"menu",
+								"1",
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id\": 1,\r\n  \r\n  \"subMenuName\": \"string menu\",\r\n  \"subMenuSource\": \"string\",\r\n  \"subMenuIcon\": \"string\",\r\n  \"subMenuOrder\": 0,\r\n  \"menuId\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/SubMenus/1",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"SubMenus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturación",
+			"item": [
+				{
+					"name": "Crear factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyId\": 12,\r\n  \"clientId\": 9,\r\n  \"receptorRfc\": \"SIT160613TN0\",\r\n  \"logoSrcCompany\": \"SIT160613TN0\",\r\n  \"receptorRazonSocial\": \"CONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE\",\r\n  \"lugarExpedicion\": \"26015\",\r\n  \"usoCfdiId\": 13,\r\n  \"formaPagoId\": 43,\r\n  \"tipoMonedaId\": 302,\r\n  \"emisorRegimenFiscalId\": 2,\r\n  \"metodoPagoId\": 2,\r\n  \"tipoComprobanteId\": 2,\r\n  \"emisorRfc\": \"EKU9003173C9\",\r\n  \"emisorRazonSocial\": \"ESCUELA KEMPER URGATE\",\r\n  \"receptorDomicilioFiscal\": \"04200\",\r\n  \"receptorRegimenFiscalId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/factura",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"companyId\": 12,\r\n    \"LogoSrcCompany\":\"\",\r\n    \"receptorRfc\": \"SIT160613TN0\",\r\n    \"receptorRazonSocial\": \"CONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE\",\r\n    \"lugarExpedicion\": \"26015\",\r\n    \"usoCfdiId\": 22,\r\n    \"formaPagoId\": 43,\r\n    \"fechaTimbrado\": null,\r\n    \"uuid\": null,\r\n    \"selloCfdi\": null,\r\n    \"selloSat\": null,\r\n    \"cadenaOriginal\": null,\r\n    \"estatus\": null,\r\n    \"tipoMonedaId\": 302,\r\n    \"emisorRegimenFiscalId\": 1,\r\n    \"motivoCancelacion\": null,\r\n    \"fechaCancelacion\": null,\r\n    \"metodoPagoId\": 2,\r\n    \"fechaPago\": null,\r\n    \"tipoComprobanteId\": 2,\r\n    \"emisorRfc\": \"EKU9003173C9\",\r\n    \"emisorRazonSocial\": \"ESCUELA KEMPER URGATE\",\r\n    \"receptorDomicilioFiscal\": \"04200\",\r\n    \"receptorRegimenFiscalId\": 1,\r\n    \"folio\": null,\r\n    \"fileXmlTimbrado\": null,\r\n    \"noCertificadoSat\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/factura/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"factura",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById factura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/factura/8",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"factura",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/factura/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"factura",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCompanyId factura",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/company/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"company",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCompanyIdAndPPD",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/ComplementoPago/company/2/client/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"ComplementoPago",
+								"company",
+								"2",
+								"client",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create mov factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"facturaId\": 6,\r\n  \"cantidad\": 1,\r\n  \"unidadMedidaId\": 41,\r\n  \"cveProductoId\": 990,\r\n  \"descripcion\": \"Shot de Rosal vivo minou spray\",\r\n  \"precioUnitario\": 10.00,\r\n  \"descuento\": 0,\r\n  \"iva\": true,\r\n  \"iva6\": false,\r\n  \"retencionIva\": false,\r\n  \"retencionIsr\": false,\r\n  \"objetoImpuestoId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/facturamovimiento",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"facturamovimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create mov factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"facturaId\": 6,\r\n    \"cantidad\": 1,\r\n    \"unidadMedidaId\": 41,\r\n    \"cveProductoId\": 990,\r\n    \"descripcion\": \"Shot de Rosal vivo minou spray s sas\",\r\n    \"precioUnitario\": 10.0000,\r\n    \"descuento\": 0.0000,\r\n    \"iva\": true,\r\n    \"iva6\": false,\r\n    \"retencionIva\": false,\r\n    \"retencionIsr\": false,\r\n    \"objetoImpuestoId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/facturamovimiento/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"facturamovimiento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/facturamovimiento/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"facturamovimiento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/facturamovimiento/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"facturamovimiento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete mov factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/facturamovimiento/3",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"facturamovimiento",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Timbrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/timbrarFactura/27",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"timbrarFactura",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/cancelarFactura/6",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"cancelarFactura",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PagoPdfFactura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "FechaPago",
+									"value": "01/01/2023",
+									"type": "text"
+								},
+								{
+									"key": "ComprobantePago",
+									"type": "file",
+									"src": "/C:/Users/LeezMito/Downloads/SECFD_20230613_034342.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/pagoPdfFactura/8",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"pagoPdfFactura",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PdfFactura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/pdfFactura/27",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"pdfFactura",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendFactura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/enviarFactura/8",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"enviarFactura",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excelFacturas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/excelFacturas",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"excelFacturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comprimirFacturas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[28,27,25]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Facturacion/comprimirFacturas",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Facturacion",
+								"comprimirFacturas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyId\": 2,\r\n  \"rfc\": \"SIT160613TN0\",\r\n  \"name\": \"CIPE\",\r\n  \"razonSocial\": \"SONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE\",\r\n  \"calle\": \"Cerro del Borrego\",\r\n  \"noExt\": \"143\",\r\n  \"noInt\": \"1\",\r\n  \"colonia\": \"Campestre Churubusco\",\r\n  \"municipio\": \"Coyoacán\",\r\n  \"estado\": \"Ciudad de México\",\r\n  \"pais\": \"México\",\r\n  \"codigoPostal\": \"04200\",\r\n  \"estatus\": true,\r\n  \"tipoPersona\": 1,\r\n  \"regimenFiscalId\": 2,\r\n  \"clabe\": \"\",\r\n  \"correos\": \"gsantos.istrue@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Clients/",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Clients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"companyId\": 2,\r\n  \"rfc\": \"SIT160613TN0\",\r\n  \"name\": \"CIPE\",\r\n  \"razonSocial\": \"CONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE\",\r\n  \"calle\": \"Cerro del Borrego\",\r\n  \"noExt\": \"143\",\r\n  \"noInt\": \"1\",\r\n  \"colonia\": \"Campestre Churubusco\",\r\n  \"municipio\": \"Coyoacán\",\r\n  \"estado\": \"Ciudad de México\",\r\n  \"pais\": \"México\",\r\n  \"codigoPostal\": \"04200\",\r\n  \"estatus\": true,\r\n  \"tipoPersona\": 1,\r\n  \"regimenFiscalId\": 2,\r\n  \"clabe\": \"\",\r\n  \"correos\": \"gsantos.istrue@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Clients/9",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Clients",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCompanyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Clients/company/12",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Clients",
+								"company",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Clients/9",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Clients",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/Clients/6",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"Clients",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjg4NTgwMDk3LCJleHAiOjE2ODg2NjY0OTcsImlhdCI6MTY4ODU4MDA5NywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.LjEjMZ4XC_UVhQxaoAaoW_Mzxkh_kykbXJM2tvFwR3A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Catálogos",
+			"item": [
+				{
+					"name": "CodigoPostal",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/CodigoPostal/09260",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"CodigoPostal",
+										"09260"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CveProductos",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/CveProductos",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"CveProductos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/CveProductos/cveProductos/49677",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"CveProductos",
+										"cveProductos",
+										"49677"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/CveProductos/49677",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"CveProductos",
+										"49677"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjg4NjYwNTMzLCJleHAiOjE2ODg3NDY5MzMsImlhdCI6MTY4ODY2MDUzMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.1Rok5uK_ybH-27ml4gJ6KBs4Zii1N34Tshsh1DkdX8U",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Regimen Fiscal",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/RegimenFiscal",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"RegimenFiscal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/RegimenFiscal/regimenFiscal/21",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"RegimenFiscal",
+										"regimenFiscal",
+										"21"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FormaPago",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/FormaPago",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"FormaPago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/FormaPago/formaPago/50",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"FormaPago",
+										"formaPago",
+										"50"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MetodoPago",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MetodoPago",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MetodoPago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/CveProductos Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MetodoPago/MetodoPago/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MetodoPago",
+										"MetodoPago",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoMoneda",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoMoneda"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoMoneda/TipoMoneda/196",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoMoneda",
+										"TipoMoneda",
+										"196"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoComprobante",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoComprobante"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoComprobante/TipoComprobante/5",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoComprobante",
+										"TipoComprobante",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ObjetoImpuesto",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ObjetoImpuesto",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ObjetoImpuesto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ObjetoImpuesto/ObjetoImpuesto/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ObjetoImpuesto",
+										"ObjetoImpuesto",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UsoCdfi",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoMoneda",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/UsoCfdi",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"UsoCfdi"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/UsoCfdi/UsoCfdi/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"UsoCfdi",
+										"UsoCfdi",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UnidadMedida",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"UnidadMedida"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/UnidadMedida/UnidadMedida/89",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"UnidadMedida",
+										"UnidadMedida",
+										"89"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjg4NjYwNTMzLCJleHAiOjE2ODg3NDY5MzMsImlhdCI6MTY4ODY2MDUzMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.1Rok5uK_ybH-27ml4gJ6KBs4Zii1N34Tshsh1DkdX8U",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Bancos",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoContrato",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoContrato"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoContrato/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoContrato",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoContrato",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoContrato",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoContrato"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Banco/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Banco",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoJornada",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoJornada",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoJornada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoJornada/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoJornada",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoPeriocidadPago",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoPeriocidadPago",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoPeriocidadPago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoPeriocidadPago/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoPeriocidadPago",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoRegimen",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoRegimen",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoRegimen"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoRegimen/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoRegimen",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoRiesgoTrabajo",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoRiesgoTrabajo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoRiesgoTrabajo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoRiesgoTrabajo/8",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoRiesgoTrabajo",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TipoIncapacidad",
+					"item": [
+						{
+							"name": "{{Enviroment}}api/v{{version}}/UnidadMedida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoIncapacidad",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoIncapacidad"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Enviroment}}api/v{{version}}/TipoComprobante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/TipoIncapacidad/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"TipoIncapacidad",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Complemento de pago",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CompanyId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "LogoSrcCompany",
+									"value": "StaticFiles\\Mate\\Companies\\EKU9003173C9-8620233755718.png",
+									"type": "text"
+								},
+								{
+									"key": "LugarExpedicion",
+									"value": "26015",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRfc",
+									"value": "EKU9003173C9",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRazonSocial",
+									"value": "ESCUELA KEMPER URGATE",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRegimenFiscalId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRfc",
+									"value": "SIT160613TN0",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRazonSocial",
+									"value": "CONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorDomicilioFiscal",
+									"value": "04200",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRegimenFiscalId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "FechaPago",
+									"value": "23/06/23",
+									"type": "text"
+								},
+								{
+									"key": "FilePago",
+									"type": "file",
+									"src": "/C:/Users/LeezMito/Downloads/9c9a44ba-42c7-5a22-b1d3-d4ac83294fde_e04b5dfb-4dac-563e-9e23-e0a881e12b44.pdf"
+								},
+								{
+									"key": "FormaPagoId",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "TipoMonedaId",
+									"value": "115",
+									"type": "text"
+								},
+								{
+									"key": "ClientId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorUsoCfdiId",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CompanyId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "LogoSrcCompany",
+									"value": "StaticFiles\\Mate\\Companies\\EKU9003173C9-8620233755718.png",
+									"type": "text"
+								},
+								{
+									"key": "LugarExpedicion",
+									"value": "26015",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRfc",
+									"value": "EKU9003173C9",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRazonSocial",
+									"value": "ESCUELA KEMPER URGATE PRUEBA UPDATE",
+									"type": "text"
+								},
+								{
+									"key": "EmisorRegimenFiscalId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRfc",
+									"value": "SIT160613TN0",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRazonSocial",
+									"value": "CONSULTING INTEGRATED TO PLANNING AND ENTREPRENEURSHIP CIPE",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorDomicilioFiscal",
+									"value": "04200",
+									"type": "text"
+								},
+								{
+									"key": "ReceptorRegimenFiscalId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "FechaPago",
+									"value": "23/06/23",
+									"type": "text"
+								},
+								{
+									"key": "FilePago",
+									"type": "file",
+									"src": "/C:/Users/LeezMito/Downloads/SECFD_20230623_081624.pdf",
+									"disabled": true
+								},
+								{
+									"key": "FormaPagoId",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "TipoMonedaId",
+									"value": "115",
+									"type": "text"
+								},
+								{
+									"key": "Id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "ClientId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "Estatus",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/1",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCompanyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/company/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"company",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create asocia factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"complementoPagoId\": 6,\r\n  \"facturaId\": 27,\r\n  \"folio\": 1,\r\n  \"monto\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/AsociarFactura",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"AsociarFactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upd asocia factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id\": 1,\r\n  \"complementoPagoId\": 1,\r\n  \"facturaId\": 27,\r\n  \"folio\": 1,\r\n  \"monto\": 6.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/AsociarFactura/1",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"AsociarFactura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get asocia factura by complemento pago",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/AsociarFactura/ComplementoPago/1",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"AsociarFactura",
+								"ComplementoPago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get asocia factura by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/AsociarFactura/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"AsociarFactura",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete asocia factura by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/AsociarFactura/2",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"AsociarFactura",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PdfComplementoPago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/pdf/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"pdf",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enviarComplementoPago",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/enviarComplemento/5",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"enviarComplemento",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "timbrarComplemento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/timbrarComplemento/6",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"timbrarComplemento",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comprimirComplemento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/comprimirComplemento",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"comprimirComplemento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excelComplemento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Enviroment}}api/v{{version}}/ComplementoPago/excelComplemento",
+							"host": [
+								"{{Enviroment}}api"
+							],
+							"path": [
+								"v{{version}}",
+								"ComplementoPago",
+								"excelComplemento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReembolsosOperativos",
+			"item": [
+				{
+					"name": "Reembolsos",
+					"item": [
+						{
+							"name": "GetReembolsoById",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "GetReembolsoByCompany",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/reembolso/company/27",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"reembolso",
+										"company",
+										"27"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateReembolso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Descripcion",
+											"value": "Reembolsos de MAXAL",
+											"type": "text"
+										},
+										{
+											"key": "Clabe",
+											"value": "722541879654821598",
+											"type": "text"
+										},
+										{
+											"key": "SrcPdfPagoComprobante",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/1289[19554].pdf"
+										},
+										{
+											"key": "UsuarioIdPago",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "SrcPdfFichaPago",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/1289[19554].pdf"
+										},
+										{
+											"key": "CompanyId",
+											"value": "27",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/reembolso",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"reembolso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllReembolsosByUserId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/reembolso/userid/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"reembolso",
+										"userid",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteReembolso",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateReembolso",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/reembolsos/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"reembolsos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjkyMDI1NTQ5LCJleHAiOjE2OTIxMTE5NDksImlhdCI6MTY5MjAyNTU0OSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.ubwmV1earPEKsRLEMTwqRxtHhRajOu5-X6TJwZmipEQ",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "MovimientoReembolso",
+					"item": [
+						{
+							"name": "CreateMovimientoReembolsoFactura",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ReembolsoId",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "fecha del 28 de julio del 2023",
+											"type": "text"
+										},
+										{
+											"key": "PDFMovReembolso",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/PruebasReembolsos/CID150911J51-3858.pdf"
+										},
+										{
+											"key": "XMLMovReembolso",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/PruebasReembolsos/cipe.mx_ComGas_CID150911J51-3858.xml"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMovimientoReembolsoFacturaSinXML",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Uuid",
+											"value": "5c5b080b-706b-4e63-9f08-005f0452fc03",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "Concepto sin XML2",
+											"type": "text"
+										},
+										{
+											"key": "EmisorRFC",
+											"value": "RTU820122CL3",
+											"type": "text"
+										},
+										{
+											"key": "EmisorNombre",
+											"value": "RIO TUERTO",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorRFC",
+											"value": "CID150911J51",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorNombre",
+											"value": "CONSULTORIA INTEGRAL EN DESARROLLO\nDE NEGOCIOS E INNOVACION ACTUARIAL",
+											"type": "text"
+										},
+										{
+											"key": "LugarExpedicion",
+											"value": "98600",
+											"type": "text"
+										},
+										{
+											"key": "FechaTimbrado",
+											"value": "2023-06-07T09:32:02",
+											"type": "text"
+										},
+										{
+											"key": "IVATrasladados",
+											"value": "1119.54",
+											"type": "text"
+										},
+										{
+											"key": "IVARetenidos",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "ISR",
+											"value": "0.1",
+											"type": "text"
+										},
+										{
+											"key": "IEPS",
+											"value": "0.2",
+											"type": "text"
+										},
+										{
+											"key": "ISH",
+											"value": "0.3",
+											"type": "text"
+										},
+										{
+											"key": "TipoMonedaId",
+											"value": "115",
+											"type": "text"
+										},
+										{
+											"key": "RegimenFiscalId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "ReembolsoId",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "TipoComprobanteId",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "FormaPagoId",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "MetodoPagoId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Subtotal",
+											"value": "8888888.88",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "99999.99",
+											"type": "text"
+										},
+										{
+											"key": "PDFMovReembolso",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/1289[19554].pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/sinxml",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										"sinxml"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMovimientoReembolsoValeAzul",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-06-07T09:32:03",
+											"type": "text"
+										},
+										{
+											"key": "EmisorNombre",
+											"value": "Nombre del emisoor",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "100000.01",
+											"type": "text"
+										},
+										{
+											"key": "MetodoPagoId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "Un concepto vale azul2",
+											"type": "text"
+										},
+										{
+											"key": "ReembolsoId",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/valeazul",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										"valeazul"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMovimientoReembolsoByPagopuestos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "EmisorNombre",
+											"value": "Secretaria de Administracion y finanzas",
+											"type": "text"
+										},
+										{
+											"key": "Monto",
+											"value": "3818.00",
+											"type": "text"
+										},
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-06-07T09:32:02",
+											"type": "text"
+										},
+										{
+											"key": "AnoyMes",
+											"value": "202306",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "IMPUESTO actualizado",
+											"type": "text"
+										},
+										{
+											"key": "MetodoPagoId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "TipoImpuestoId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "LineaCaptura",
+											"value": "88CID159BXJ51F93BT2D",
+											"type": "text"
+										},
+										{
+											"key": "ReembolsoId",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "PDFMovReembolso",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/impuesto local junio 2023 CIDNIA CDMX.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/pagoimpuestos",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										"pagoimpuestos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllMovimientoReembolsoByReembolsoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/reembolsoid/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										"reembolsoid",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetMovimientoReembolsoById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/85",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										"85"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMovimientoReembolso",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoReembolso/",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoReembolso",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjkyMTM0MTAyLCJleHAiOjE2OTIyMjA1MDIsImlhdCI6MTY5MjEzNDEwMiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.1v2sP26pl02cJXeJwswsohY9v2RjMBAH4xftsCyFaNA",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IkNvbXVuIiwibmJmIjoxNjkxMTY1NDk4LCJleHAiOjE2OTEyNTE4OTgsImlhdCI6MTY5MTE2NTQ5OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.-Y14YRKRpiLahWYbr039NdcT2cNIBT233N3CkxpP35Q",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Kanban",
+			"item": [
+				{
+					"name": "Ticket",
+					"item": [
+						{
+							"name": "CreateTicket",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "TipoSolicitudTicketId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "SistemaId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "DepartamentoId",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "EmployeeCreadorId",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "EmployeeAsignadoId",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "EstadoId",
+											"value": "27",
+											"type": "text"
+										},
+										{
+											"key": "OpcionMenu",
+											"value": "opcion menu",
+											"type": "text"
+										},
+										{
+											"key": "OpcionSubMenu",
+											"value": "Opcion Summenu",
+											"type": "text"
+										},
+										{
+											"key": "Titulo",
+											"value": "pos un titulo",
+											"type": "text"
+										},
+										{
+											"key": "Descripcion",
+											"value": "pos una descripcion",
+											"type": "text"
+										},
+										{
+											"key": "Imagen",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/pdf_2.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTicket",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 9,\r\n  \"estatus\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllByCompanyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket/company/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket",
+										"company",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllTicketsByCompanyIdAndEmployeeAsignadoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket/company/2/employee-asignado/14",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket",
+										"company",
+										"2",
+										"employee-asignado",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllTicketsByCompanyIdAndEmployeeCreadorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket/company/2/employee-creador/14",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket",
+										"company",
+										"2",
+										"employee-creador",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteTicket",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ticket/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ticket",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sistema",
+					"item": [
+						{
+							"name": "CreateSistema",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Sistema4\",\r\n  \"clave\": \"MSRTOD\",\r\n  \"descripcion\": \"Un Gran siiistemaaa4\",\r\n  \"color\": \"#fff\",\r\n  \"estadoId\": 15\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Sistema",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Sistema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSistema",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4,\r\n  \"nombre\": \"Nombre de un sistema444\",\r\n  \"clave\": \"MSR444\",\r\n  \"descripcion\": \"Un Gran siiistemaaa444\",\r\n  \"color\": \"#fefefe\",\r\n  \"estadoId\": 16\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Sistema/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Sistema",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSistema",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Sistema/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Sistema",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSistemaByIdQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Sistema/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Sistema",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSistemasByEstadoIdQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Sistema/estado/15",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Sistema",
+										"estado",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SistemasDepartamentos",
+					"item": [
+						{
+							"name": "CreateSistemaDepartamento",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"sistemaId\": 2,\r\n  \"departamentoId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SistemaDepartamento",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SistemaDepartamento"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSistemaDepartamentoCommand",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SistemaDepartamento/sistema/2/departamento/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SistemaDepartamento",
+										"sistema",
+										"2",
+										"departamento",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSistemasDepartamentosByDepartamentoIdQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SistemaDepartamento/departamento/4",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SistemaDepartamento",
+										"departamento",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSistemasDepartamentosBySistemaIdQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SistemaDepartamento/sistema/2",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SistemaDepartamento",
+										"sistema",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MiPortal",
+			"item": [
+				{
+					"name": "Viaticos",
+					"item": [
+						{
+							"name": "CreateViatico",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": 17,\r\n  \"fecha\": \"2023-01-16T16:46:56.386Z\",\r\n  \"companyId\": 27,\r\n  \"estatus\": \"algun estatus\",\r\n  \"monto\": 1212121,\r\n  \"descripcion\": \"una descripcion\",\r\n  \"bancoId\": 3,\r\n  \"noCuenta\": \"01236789\",\r\n  \"employeePagoId\": 28,\r\n  \"fechaPago\": \"2023-11-16T16:46:56.386Z\",\r\n  \"montoRecibido\": 2222,\r\n  \"tipo\": \"Tipo1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Viatico",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Viatico"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetViaticosByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Viatico/employee/17",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Viatico",
+										"employee",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateViatico",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 7,\r\n  \"employeeId\": 17,\r\n  \"fecha\": \"2023-11-16T16:46:56.386Z\",\r\n  \"companyId\": 27,\r\n  \"estatus\": \"Estatus2\",\r\n  \"monto\": 777777,\r\n  \"descripcion\": \"una descripcion7\",\r\n  \"bancoId\": 3,\r\n  \"noCuenta\": \"987654321\",\r\n  \"employeePagoId\": 28,\r\n  \"fechaPago\": \"2023-11-16T16:46:56.386Z\",\r\n  \"montoRecibido\": 33333,\r\n  \"tipo\": \"Tipo1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Viatico/7",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Viatico",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteViaticoCommand",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Viatico/7",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Viatico",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetViaticoById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Viatico/7",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Viatico",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comprobantes",
+					"item": [
+						{
+							"name": "CreateComprobante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ViaticoId",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "100000",
+											"type": "text"
+										},
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-11-16T16:46:56.386Z",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "algo chido",
+											"type": "text"
+										},
+										{
+											"key": "XML",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231110_094157.xml"
+										},
+										{
+											"key": "PDF",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231110_094157.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Comprobante",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Comprobante"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetComprobanteById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Comprobante/6",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Comprobante",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteComprobante",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Comprobante/10",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Comprobante",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateComprobante",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "ViaticoId",
+											"value": "13",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "1234656",
+											"type": "text"
+										},
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-11-16T16:46:56.386Z",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "otro cambio",
+											"type": "text"
+										},
+										{
+											"key": "XML",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "PDF",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Comprobante",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Comprobante"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetComprobantesByViaticoQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Comprobante/Viatico/11",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Comprobante",
+										"Viatico",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ComprobantesSinXML",
+					"item": [
+						{
+							"name": "CreateComprobanteSinXML",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ViaticoId",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-11-16T16:46:56.386Z",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "algun concepto",
+											"type": "text"
+										},
+										{
+											"key": "PDF",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2075745_20231121.pdf"
+										},
+										{
+											"key": "Uuid",
+											"value": "5c5b080b-706b-4e63-9f08-005f0452fc03",
+											"type": "text"
+										},
+										{
+											"key": "Folio",
+											"value": "55512167987989899653538282521",
+											"type": "text"
+										},
+										{
+											"key": "EmisorRFC",
+											"value": "RTU820122CL3",
+											"type": "text"
+										},
+										{
+											"key": "EmisorNombre",
+											"value": "algun receptor",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorRFC",
+											"value": "CID150911J51",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorNombre",
+											"value": "algun emisor",
+											"type": "text"
+										},
+										{
+											"key": "TipoMonedaId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "FormaPagoId",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "Subtotal",
+											"value": "5484",
+											"type": "text"
+										},
+										{
+											"key": "Descuento",
+											"value": "2548",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "123654",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ComprobanteSinXML",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ComprobanteSinXML"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateComprobanteSinXML",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "ViaticoId",
+											"value": "13",
+											"type": "text"
+										},
+										{
+											"key": "FechaMovimiento",
+											"value": "2023-11-16T16:46:56.386Z",
+											"type": "text"
+										},
+										{
+											"key": "Concepto",
+											"value": "algun concepto modiifcado",
+											"type": "text"
+										},
+										{
+											"key": "PDF",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2073826_20231110.pdf"
+										},
+										{
+											"key": "Uuid",
+											"value": "5c5b080b-706b-4e63-9f08-005f0452fc03",
+											"type": "text"
+										},
+										{
+											"key": "Folio",
+											"value": "55512167987989899653538282521",
+											"type": "text"
+										},
+										{
+											"key": "EmisorRFC",
+											"value": "RTU820122CL3",
+											"type": "text"
+										},
+										{
+											"key": "EmisorNombre",
+											"value": "algun receptor mpodificado",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorRFC",
+											"value": "CID150911J51",
+											"type": "text"
+										},
+										{
+											"key": "ReceptorNombre",
+											"value": "algun emisor modificado",
+											"type": "text"
+										},
+										{
+											"key": "TipoMonedaId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "FormaPagoId",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "Subtotal",
+											"value": "51",
+											"type": "text"
+										},
+										{
+											"key": "Descuento",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "Total",
+											"value": "100.11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ComprobanteSinXML",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ComprobanteSinXML"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetComprobanteSinXMLbyId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ComprobanteSinXML/6",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ComprobanteSinXML",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetComprobantesSinXMLByViaticoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ComprobanteSinXML/Viatico/14",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ComprobanteSinXML",
+										"Viatico",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteComprobanteSinXML",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/ComprobanteSinXML/6",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"ComprobanteSinXML",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Incidencias",
+					"item": [
+						{
+							"name": "CreateIncidenciaCualquiera",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"empleadoId\": 33,\r\n  \"tipoId\": 8,\r\n  \"fechaInicio\": \"2023-11-15\",\r\n  \"motivo\": \"Permiso para llegar tarde\",\r\n  \"justificacion\": \"Vengo de viaje\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Incidencias/CrearIncidenciaCualquiera/33\n",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Incidencias",
+										"CrearIncidenciaCualquiera",
+										"33\n"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Solicitudes",
+					"item": [
+						{
+							"name": "CreateSolicitud",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "EmployeeId",
+											"value": "22",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Tipo",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Monto",
+											"value": "99999999",
+											"type": "text"
+										},
+										{
+											"key": "Interes",
+											"value": "55555",
+											"type": "text"
+										},
+										{
+											"key": "Fecha",
+											"value": "2024-01-04T20:06:53.154Z",
+											"type": "text"
+										},
+										{
+											"key": "FechaCambioEstatus",
+											"value": "2024-01-04T20:06:53.154Z",
+											"type": "text"
+										},
+										{
+											"key": "Plazo",
+											"value": "24",
+											"type": "text"
+										},
+										{
+											"key": "FondoGarantia",
+											"value": "44444",
+											"type": "text"
+										},
+										{
+											"key": "DocPrestamo",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/pdf_2.png"
+										},
+										{
+											"key": "Folio",
+											"value": "56548954899858165",
+											"type": "text"
+										},
+										{
+											"key": "DocAuto",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/pdf_2.png"
+										},
+										{
+											"key": "DocPago",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/pdf_2.png"
+										},
+										{
+											"key": "DocRest",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/pdf_2.png"
+										},
+										{
+											"key": "Estatus",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Solicitud",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Solicitud"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateSolicitud",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "EmployeeId",
+											"value": "22",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Tipo",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Monto",
+											"value": "111111111111111111",
+											"type": "text"
+										},
+										{
+											"key": "Interes",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "Fecha",
+											"value": "2024-01-04T20:06:53.154Z",
+											"type": "text"
+										},
+										{
+											"key": "FechaCambioEstatus",
+											"value": "2024-01-04T20:06:53.154Z",
+											"type": "text"
+										},
+										{
+											"key": "Plazo",
+											"value": "06",
+											"type": "text"
+										},
+										{
+											"key": "FondoGarantia",
+											"value": "1111111",
+											"type": "text"
+										},
+										{
+											"key": "DocPrestamo",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2073826_20231110.pdf"
+										},
+										{
+											"key": "Folio",
+											"value": "11111111111111111111111111111",
+											"type": "text"
+										},
+										{
+											"key": "DocAuto",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231110_094157.pdf"
+										},
+										{
+											"key": "DocPago",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2075745_20231121.pdf"
+										},
+										{
+											"key": "DocRest",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231123_094916.pdf"
+										},
+										{
+											"key": "Estatus",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Id",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SolicitudPrestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SolicitudPrestamo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSolicitud",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SolicitudPrestamo/5",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SolicitudPrestamo",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSolicitudById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Solicitud/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Solicitud",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSolicitudesByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/SolicitudPrestamo/employee/22",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"SolicitudPrestamo",
+										"employee",
+										"22"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ahorro Voluntario",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": 32,\r\n  \"companyId\": 3,\r\n  \"fechaInicio\": \"2024-01-24T16:57:33.786Z\",\r\n  \"fechaFinal\": \"2024-01-24T16:57:33.786Z\",\r\n  \"periodoInicial\": 202401,\r\n  \"periodoFinal\": 202424,\r\n  \"estatus\": 0,\r\n  \"rendimiento\": 0.2555,\r\n  \"descuento\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroVoluntario",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroVoluntario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n  \"employeeId\": 32,\r\n  \"companyId\": 3,\r\n  \"fechaInicio\": \"2022-01-24T16:57:33.786Z\",\r\n  \"fechaFinal\": \"2023-01-24T16:57:33.786Z\",\r\n  \"periodoInicial\": 200001,\r\n  \"periodoFinal\": 200024,\r\n  \"estatus\": 1,\r\n  \"rendimiento\": 1.2555,\r\n  \"descuento\": 2001\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroVoluntario",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroVoluntario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroVoluntario/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroVoluntario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroVoluntario/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroVoluntario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroVoluntario/employee/32",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroVoluntario",
+										"employee",
+										"32"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movimiento Ahorro Voluntario",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ahorroVoluntarioId\": 2,\r\n  \"employeeId\": 33,\r\n  \"companyId\": 2,\r\n  \"periodo\": 202001,\r\n  \"monto\": 7410,\r\n  \"rendimiento\": 10,\r\n  \"estadoTransaccion\": 0,\r\n  \"interes\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroVoluntario",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroVoluntario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ahorroVoluntarioId\": 2,\r\n  \"employeeId\": 33,\r\n  \"companyId\": 2,\r\n  \"movimientoId\": 3,\r\n  \"periodo\": 202401,\r\n  \"monto\": 999999,\r\n  \"rendimiento\": 111,\r\n  \"estadoTransaccion\": 1,\r\n  \"interes\": 10001\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroVoluntario",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroVoluntario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroVoluntario/company/2/employee/33/ahorro/2/movimiento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroVoluntario",
+										"company",
+										"2",
+										"employee",
+										"33",
+										"ahorro",
+										"2",
+										"movimiento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroVoluntario/company/2/employee/32/ahorro/2/movimiento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroVoluntario",
+										"company",
+										"2",
+										"employee",
+										"32",
+										"ahorro",
+										"2",
+										"movimiento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroVoluntario/company/2/employee/32",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroVoluntario",
+										"company",
+										"2",
+										"employee",
+										"32"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ahorro Wise",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "EmployeeId",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "FechaInicio",
+											"value": "2024-01-24T16:57:33.786Z",
+											"type": "text"
+										},
+										{
+											"key": "FechaFinal",
+											"value": "2024-01-24T16:57:33.786Z",
+											"type": "text"
+										},
+										{
+											"key": "PeriodoInicial",
+											"value": "202401",
+											"type": "text"
+										},
+										{
+											"key": "PeriodoFinal",
+											"value": "202420",
+											"type": "text"
+										},
+										{
+											"key": "Estatus",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Rendimiento",
+											"value": "99999.99",
+											"type": "text"
+										},
+										{
+											"key": "FileConstancia",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2073826_20231110.pdf"
+										},
+										{
+											"key": "FilePago",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231110_094157.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroWise",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroWise"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "EmployeeId",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "CompanyId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "FechaInicio",
+											"value": "2000-01-24T16:57:33.786Z",
+											"type": "text"
+										},
+										{
+											"key": "FechaFinal",
+											"value": "2000-01-24T16:57:33.786Z",
+											"type": "text"
+										},
+										{
+											"key": "PeriodoInicial",
+											"value": "199801",
+											"type": "text"
+										},
+										{
+											"key": "PeriodoFinal",
+											"value": "199824",
+											"type": "text"
+										},
+										{
+											"key": "Estatus",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "Rendimiento",
+											"value": "88888.88",
+											"type": "text"
+										},
+										{
+											"key": "FileConstancia",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SECFD_20231110_094157.pdf"
+										},
+										{
+											"key": "FilePago",
+											"type": "file",
+											"src": "/C:/Users/BECARIO-1/Downloads/SBE921216JS3_CFDI_AW2073826_20231110.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroWise",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroWise"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroWise/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroWise",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroWise/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroWise",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/AhorroWise/employee/14",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"AhorroWise",
+										"employee",
+										"14"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movimiento Ahorro Wise",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ahorroWiseId\": 2,\r\n  \"employeeId\": 33,\r\n  \"companyId\": 3,\r\n  \"periodo\": 200001,\r\n  \"monto\": 99999,\r\n  \"rendimiento\": 99,\r\n  \"estadoTransaccion\": 0,\r\n  \"interes\": 88\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroWise",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroWise"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ahorroWiseId\": 1,\r\n  \"employeeId\": 32,\r\n  \"companyId\": 2,\r\n  \"movimientoId\":1,\r\n  \"periodo\": 202201,\r\n  \"monto\": 888888,\r\n  \"rendimiento\": 77,\r\n  \"estadoTransaccion\": 1,\r\n  \"interes\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroWise",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroWise"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroWise/company/3/employee/33/ahorro/2/movimiento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroWise",
+										"company",
+										"3",
+										"employee",
+										"33",
+										"ahorro",
+										"2",
+										"movimiento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroWise/company/2/employee/32/ahorro/1/movimiento/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroWise",
+										"company",
+										"2",
+										"employee",
+										"32",
+										"ahorro",
+										"1",
+										"movimiento",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoAhorroWise/company/2/employee/32",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoAhorroWise",
+										"company",
+										"2",
+										"employee",
+										"32"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prestamos",
+					"item": [
+						{
+							"name": "CreatePrestamo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeId\": 23,\r\n  \"companyId\": 3,\r\n  \"fechaInicio\": \"2024-01-24T17:01:28.831Z\",\r\n  \"fechaFinal\": \"2024-01-24T17:01:28.831Z\",\r\n  \"periodoInicial\": 202301,\r\n  \"periodoFinal\": 202323,\r\n  \"estatus\": 1,\r\n  \"plazo\": 12,\r\n  \"monto\": 99999,\r\n  \"montoPagado\": 99,\r\n  \"interes\": 8,\r\n  \"tazaInteres\": 7,\r\n  \"plazoInteres\": 24,\r\n  \"fondoGarantia\": 12345,\r\n  \"tazaFondoGarantia\": 54321,\r\n  \"fechaTransferencia\": \"2024-01-24T17:01:28.831Z\",\r\n  \"descuento\": 200,\r\n  \"total\": 98989898,\r\n  \"tipo\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Prestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Prestamo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletePrestamo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Prestamo/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Prestamo",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdatePrestamo",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n  \"employeeId\": 23,\r\n  \"companyId\": 2,\r\n  \"fechaInicio\": \"2020-01-24T17:01:28.831Z\",\r\n  \"fechaFinal\": \"2022-01-24T17:01:28.831Z\",\r\n  \"periodoInicial\": 200001,\r\n  \"periodoFinal\": 200023,\r\n  \"estatus\": 0,\r\n  \"plazo\": 24,\r\n  \"monto\": 99888999,\r\n  \"montoPagado\": 9889,\r\n  \"interes\": 80,\r\n  \"tazaInteres\": 70,\r\n  \"plazoInteres\": 48,\r\n  \"fondoGarantia\": 54321,\r\n  \"tazaFondoGarantia\": 12345,\r\n  \"fechaTransferencia\": \"2000-01-24T17:01:28.831Z\",\r\n  \"descuento\": 111,\r\n  \"total\": 8787878,\r\n  \"tipo\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Prestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Prestamo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPrestamoById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Prestamo/1",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Prestamo",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllPrestamosByEmployeeId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/Prestamo/employee/23",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"Prestamo",
+										"employee",
+										"23"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movimiento Prestamos",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"prestamoId\": 2,\r\n  \"employeeId\": 23,\r\n  \"companyId\": 3,\r\n  \"periodo\": 200000,\r\n  \"monto\": 10000,\r\n  \"rendimiento\": 10,\r\n  \"estadoTransaccion\": 0,\r\n  \"capital\": 1000,\r\n  \"fondoGarantia\": 111,\r\n  \"saldoActual\": 123456,\r\n  \"interes\": 888,\r\n  \"moratorio\": 88\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoPrestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoPrestamo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"prestamoId\": 1,\r\n        \"employeeId\": 23,\r\n        \"companyId\": 3,\r\n        \"movimientoId\": 3,\r\n        \"periodo\": 222222,\r\n        \"monto\": 111111,\r\n        \"rendimiento\": 11,\r\n        \"estadoTransaccion\": 1,\r\n        \"capital\": 222222,\r\n        \"fondoGarantia\": 222,\r\n        \"saldoActual\": 654321,\r\n        \"interes\": 100,\r\n        \"moratorio\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoPrestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoPrestamo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoPrestamo/company/3/employee/23/prestamo/2/movimiento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoPrestamo",
+										"company",
+										"3",
+										"employee",
+										"23",
+										"prestamo",
+										"2",
+										"movimiento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoPrestamo/company/3/employee/23/prestamo/1/movimiento/3",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoPrestamo",
+										"company",
+										"3",
+										"employee",
+										"23",
+										"prestamo",
+										"1",
+										"movimiento",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllBy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Enviroment}}api/v{{version}}/MovimientoPrestamo",
+									"host": [
+										"{{Enviroment}}api"
+									],
+									"path": [
+										"v{{version}}",
+										"MovimientoPrestamo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6IlN1cGVyIiwibmJmIjoxNzA2NzMxNjUxLCJleHAiOjE3MDY4MTgwNTEsImlhdCI6MTcwNjczMTY1MSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE5MSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxOTEifQ.4EN93PIRg9qJLI6yN2rxsyFEdD_UdUeL0_HtkDXp6TQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

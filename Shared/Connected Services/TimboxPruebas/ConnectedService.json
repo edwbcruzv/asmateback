@@ -1,0 +1,37 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://staging.ws.timbox.com.mx/timbrado_cfdi40/wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TimboxPruebas"
+    ],
+    "references": [
+      "Ardalis.Specification, {Ardalis.Specification, 6.1.0}",
+      "AutoMapper, {AutoMapper, 12.0.1}",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection, {AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1}",
+      "C:\\Users\\LeezMito\\source\\repos\\MateBack\\Shared\\bin\\Debug\\net6.0\\publish\\Application.dll",
+      "C:\\Users\\LeezMito\\source\\repos\\MateBack\\Shared\\bin\\Debug\\net6.0\\publish\\Domain.dll",
+      "FluentValidation, {FluentValidation, 11.5.2}",
+      "FluentValidation.DependencyInjectionExtensions, {FluentValidation.DependencyInjectionExtensions, 11.5.2}",
+      "MediatR, {MediatR, 11.0.0}",
+      "MediatR.Contracts, {MediatR.Contracts, 1.0.1}",
+      "MediatR.Extensions.Microsoft.DependencyInjection, {MediatR.Extensions.Microsoft.DependencyInjection, 11.1.0}",
+      "Microsoft.AspNetCore.Http.Features, {Microsoft.AspNetCore.Http.Features, 5.0.17}",
+      "Microsoft.Extensions.Configuration.Abstractions, {Microsoft.Extensions.Configuration.Abstractions, 7.0.0}",
+      "Microsoft.Extensions.Configuration.Binder, {Microsoft.Extensions.Configuration.Binder, 7.0.0}",
+      "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 7.0.0}",
+      "Microsoft.Extensions.Options, {Microsoft.Extensions.Options, 7.0.0}",
+      "Microsoft.Extensions.Options.ConfigurationExtensions, {Microsoft.Extensions.Options.ConfigurationExtensions, 7.0.0}",
+      "Microsoft.Extensions.Primitives, {Microsoft.Extensions.Primitives, 7.0.0}",
+      "System.IO.Pipelines, {System.IO.Pipelines, 5.0.2}",
+      "System.Runtime.CompilerServices.Unsafe, {System.Runtime.CompilerServices.Unsafe, 6.0.0}"
+    ],
+    "targetFramework": "net6.0",
+    "typeReuseMode": "All"
+  }
+}

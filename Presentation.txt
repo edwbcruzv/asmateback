@@ -1,0 +1,3 @@
+Capa de interfaz de usuario: Esta capa es responsable de la interacción con los usuarios y presenta la información al mundo exterior. 
+Puede ser una interfaz web, una interfaz de línea de comandos, una aplicación móvil, etc. 
+Esta capa se comunica con el núcleo de la aplicación a través de interfaces bien definidas y no contiene lógica de negocio significativa.

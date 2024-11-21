@@ -1,0 +1,9 @@
+La "arquitectura cebolla" es un término utilizado en el contexto de la ingeniería de software para describir un enfoque de diseño y desarrollo de software 
+que busca lograr una estructura modular y bien organizada. El término se deriva de la metáfora de una cebolla, donde cada capa representa un nivel 
+diferente de abstracción y funcionalidad.
+
+En la arquitectura cebolla, el código se organiza en capas concéntricas, con las capas más internas representando la lógica central 
+de la aplicación y las capas externas representando la interfaz de usuario y la integración con sistemas externos. Las capas están 
+dispuestas en orden de dependencia, de modo que las capas más internas no dependen de las capas externas, pero las capas externas 
+dependen de las capas internas.
+
